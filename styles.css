@@ -1,0 +1,413 @@
+:root {
+  color-scheme: light;
+  --background: #f5f7f3;
+  --surface: #ffffff;
+  --surface-muted: #eef3eb;
+  --text: #1d2a20;
+  --text-muted: #667268;
+  --primary: #41644a;
+  --primary-dark: #2f4d36;
+  --border: #dce5da;
+  --danger: #a23c3c;
+  --warning-bg: #fff7df;
+  --warning-border: #ead49a;
+  --shadow: 0 12px 36px rgba(30, 48, 34, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+  word-break: keep-all;
+}
+
+a {
+  color: var(--primary-dark);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(220, 229, 218, 0.9);
+  background: rgba(245, 247, 243, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.header-inner,
+.page,
+.footer-inner {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+}
+
+.header-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.nav a {
+  color: var(--text-muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--primary-dark);
+}
+
+.page {
+  padding: 72px 0 96px;
+}
+
+.hero {
+  padding: 48px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffffff 0%, #eff5ed 100%);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 720px;
+  margin-bottom: 18px;
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.document-title {
+  margin-bottom: 12px;
+  font-size: clamp(32px, 5vw, 46px);
+}
+
+.lead {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--primary-dark);
+}
+
+.button.danger {
+  border-color: var(--danger);
+  background: var(--danger);
+}
+
+.button.is-disabled {
+  border-color: #b7bdb8;
+  background: #b7bdb8;
+  cursor: not-allowed;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.card,
+.document-section,
+.step {
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.card {
+  min-height: 210px;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+.card a {
+  font-weight: 800;
+}
+
+.document-header {
+  margin-bottom: 28px;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.document-section {
+  margin-top: 16px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.document-section h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.document-section h3 {
+  margin: 24px 0 8px;
+  font-size: 17px;
+}
+
+.document-section p:last-child,
+.document-section ul:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 22px;
+}
+
+li + li {
+  margin-top: 7px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--surface-muted);
+  color: var(--primary-dark);
+}
+
+.notice {
+  margin: 20px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--warning-border);
+  border-radius: 14px;
+  background: var(--warning-bg);
+  color: #674f12;
+  font-size: 14px;
+}
+
+.steps {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.step-number {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface-muted);
+  color: var(--primary-dark);
+  font-weight: 900;
+}
+
+.step strong,
+.step p {
+  display: block;
+}
+
+.step p {
+  margin: 3px 0 0;
+  color: var(--text-muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer-inner {
+  display: flex;
+  min-height: 110px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .header-inner,
+  .page,
+  .footer-inner {
+    width: min(100% - 28px, 920px);
+  }
+
+  .header-inner {
+    min-height: 62px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+
+  .nav {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .nav .home-link {
+    display: none;
+  }
+
+  .page {
+    padding: 42px 0 68px;
+  }
+
+  .hero {
+    padding: 30px 24px;
+    border-radius: 22px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .document-section {
+    padding: 23px 20px;
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .footer-inner {
+    min-height: 130px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+}
