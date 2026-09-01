@@ -23,29 +23,6 @@
     element.hidden = configured;
   });
 
-  document.querySelectorAll('[data-support-link]').forEach((element) => {
-    if (!supportEmail) {
-      element.removeAttribute('href');
-      element.setAttribute('aria-disabled', 'true');
-      element.classList.add('is-disabled');
-      return;
-    }
-
-    const subject = `${appName} 계정 삭제 요청`;
-    const body = [
-      '한 절 하가다 묵상 계정 삭제를 요청합니다.',
-      '',
-      '이름:',
-      '연도:',
-      '부서:',
-      '셀:',
-      '셀리더:',
-      '',
-      '비밀번호와 초대 코드는 작성하지 마세요.',
-    ].join('\n');
-    element.href = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-
   document.querySelectorAll('[data-current-year]').forEach((element) => {
     element.textContent = String(new Date().getFullYear());
   });

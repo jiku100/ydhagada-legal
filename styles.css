@@ -324,6 +324,49 @@ th {
   color: var(--text-muted);
 }
 
+.request-template {
+  margin: 20px 0 28px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-muted);
+}
+
+.request-template p {
+  margin-bottom: 8px;
+}
+
+.request-template-label {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.request-template-label:first-child {
+  margin-top: 0;
+}
+
+.email-address {
+  color: var(--primary-dark);
+  font-size: 18px;
+  font-weight: 900;
+  word-break: break-all;
+}
+
+.request-template pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   background: var(--surface);
